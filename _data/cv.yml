@@ -2,18 +2,18 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Rafid Ahmed
     - name: Date of Birth
-      value: 14th March 1879
+      value: 4th April, 2001
     - name: Languages
-      value: English, German
+      value: Bangla, English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: B.Sc in Computer Science and Engineering
+      institution: University of Dhaka, Dhaka, Bangladesh
+      year: 2019 - 2024
       description:
         - Description 1.
         - Description 2.

@@ -1,14 +1,12 @@
-github_users:
-  - torvalds
-  - alshedivat
+github_users: 
+  - AhmedRafid023
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - AhmedRafid023/med-vqa-LoRA
+  - AhmedRafid023/AhmedRafid023.github.io
+  - AhmedRafid023/Express-backend-server 
+  - AhmedRafid023/movie-app
+  - AhmedRafid023/book-recommender 
+  # - AhmedRafid023/Medical-Visual-Question-Answering
