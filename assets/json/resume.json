@@ -4,11 +4,11 @@
     "label": "AI Engineer",
     "image": "",
     "email": "ahmedrafid023@gmail.com",
-    "phone": "+880 1628312077",
+    // "phone": "+880 1628312077",
     // "url": "https://AhmedRafid023.github.io/",
     // "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
-      "address": "2712 Broadway St",
+      "address": "Road 7, Banani",
       "postalCode": "Dhaka 1213",
       "city": "Dhaka",
       "countryCode": "BAN",
@@ -22,15 +22,37 @@
       }
     ]
   },
+  "education": [
+    {
+      "institution": "University of Dhaka",
+      "location": "Dhaka, Bangladesh",
+      "url": "https://www.du.ac.bd/",
+      "area": "Computer Science and Engineering",
+      "studyType": "B.Sc",
+      "startDate": "2019",
+      "endDate": "2024",
+      "score": "3.54"
+      // "courses": ["Theory of Relativity"]
+    }
+  ],
   "work": [
     {
       "name": "Penta Global Limited",
       "position": "AI Engineer",
       "url": "https://pentabd.com",
-      "startDate": "2025-01-01",
+      "startDate": "2025-03-01",
       "endDate": "Present",
-      "summary": "Working on a timeseries forecasting pipeline for a major telecom company in the USA.",
+      "summary": "Currently engaged in research on time series forecasting, small object detection, and medical visual question answering (VQA), with a focus on linear projection, prompt learning, and fine-tuning strategies for large language and vision-language models (LLMs & VLMs)",
       "highlights": ["Developed AI models for various applications", "Collaborated with cross-functional teams"]
+    },
+    {
+      "name": "Eximus Technologies",
+      "position": "Full Stack Developer",
+      "url": "https://www.eximusedu.com/",
+      "startDate": "2024-03-01",
+      "endDate": "2025-01-31",
+      "summary": "Built and optimized web applications using Laravel, Vue.js, React.js, and MySQL. Developed APIs, integrated payment and payroll modules, and ensured responsive design."
+      // "highlights": [""]
     }
   ],
   // "volunteer": [
@@ -45,72 +67,72 @@
   //     "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
   //   }
   // ],
-  "education": [
-    {
-      "institution": "University of Dhaka",
-      "location": "Dhaka, Bangladesh",
-      "url": "https://www.du.ac.bd/",
-      "area": "Computer Science and Engineering",
-      "studyType": "B.Sc",
-      "startDate": "2019",
-      "endDate": "2024",
-      "score": "10"
-      // "courses": ["Theory of Relativity"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
-    },
-    {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
-    },
-    {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
-    },
-    {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
-    }
-  ],
+  // "education": [
+  //   {
+  //     "institution": "University of Dhaka",
+  //     "location": "Dhaka, Bangladesh",
+  //     "url": "https://www.du.ac.bd/",
+  //     "area": "Computer Science and Engineering",
+  //     "studyType": "B.Sc",
+  //     "startDate": "2019",
+  //     "endDate": "2024",
+  //     "score": "10"
+  //     // "courses": ["Theory of Relativity"]
+  //   }
+  // ],
+  // "awards": [
+  //   {
+  //     "title": "Nobel Prize in Physics",
+  //     "date": "1921-11-01",
+  //     "awarder": "Royal Swedish Academy of Sciences",
+  //     "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+  //     "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+  //   }
+  // ],
+  // "certificates": [
+  //   {
+  //     "name": "Machine Learning",
+  //     "date": "2018-01-01",
+  //     "issuer": "Stanford University",
+  //     "url": "https://example.com",
+  //     "icon": "fa-solid fa-location-dot"
+  //   },
+  //   {
+  //     "name": "Quantum Computing",
+  //     "date": "2018-01-01",
+  //     "issuer": "Stanford University",
+  //     "url": "https://example.com",
+  //     "icon": "fa-solid fa-tag"
+  //   },
+  //   {
+  //     "name": "Quantum Information",
+  //     "date": "2018-01-01",
+  //     "issuer": "Stanford University",
+  //     "url": "https://example.com",
+  //     "icon": "fa-solid fa-envelope"
+  //   },
+  //   {
+  //     "name": "Quantum Cryptography",
+  //     "date": "2018-01-01",
+  //     "issuer": "Stanford University",
+  //     "url": "https://example.com",
+  //     "icon": "fa-solid fa-hashtag"
+  //   },
+  //   {
+  //     "name": "Quantum Communication",
+  //     "date": "2018-01-01",
+  //     "issuer": "Stanford University",
+  //     "url": "https://example.com",
+  //     "icon": "fa-solid fa-calendar"
+  //   },
+  //   {
+  //     "name": "Quantum Teleportation",
+  //     "date": "2018-01-01",
+  //     "issuer": "Stanford University",
+  //     "url": "https://example.com",
+  //     "icon": "fa-solid fa-clipboard-check"
+  //   }
+  // ],
   "publications": [
     {
       "name": "Zur Elektrody/namik bewegter Körper",
@@ -135,23 +157,50 @@
     }
   ],
   "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
+  {
+    "name": "Programming Languages",
+    "level": "Master",
+    "icon": "fa-solid fa-code",
+    "keywords": [
+      "Python, C, C++, JavaScript, Java, Kotlin, PHP"
+    ]
+  },
+  {
+    "name": "Deep Learning Tools",
+    "level": "Master",
+    "icon": "fa-solid fa-brain",
+    "keywords": [
+      "Pytorch, Huggingface, Tensorflow, TIMM"
+    ]
+  },
+  {
+    "name": "Large Language Models",
+    "level": "Master",
+    "icon": "fa-solid fa-robot",
+    "keywords": [
+      "RAG, GraphRAG, Multimodal RAG, LLM Agents, Web Agent"
+    ]
+  },
+  {
+    "name": "LLM Tools",
+    "level": "Master",
+    "icon": "fa-solid fa-toolbox",
+    "keywords": [
+      "LangChain, LlamaIndex, Chroma, VLLM, OLLaMa, Faiss Vector Search"
+    ]
+  },
+  {
+    "name": "Other Tools",
+    "level": "Master",
+    "icon": "fa-solid fa-wrench",
+    "keywords": [
+      "Scikit-Learn, Numpy, SciPy, Pandas, NLTK, Plotly"
+    ]
+  }
+],
   "languages": [
     {
-      "language": "German",
+      "language": "Bangla",
       "fluency": "Native speaker",
       "icon": ""
     },
@@ -163,38 +212,38 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Artificial Intelligence",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Natural Language Processing",
+        "Large Language Models",
+        "Vision Language Models",
+        "Low Resource Language",
+        "Multimodal Adapters",
+        "Visual Question Answering"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
+      "name": "Md Farhad Alam Bhuiyan",
       "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": "Head of R&D at Penta Global Ltd. <br>Assistant Professor at Independent University, Bangladesh <br> Co-director at Center for Computational & Data Sciences, IUB <br> Email : pdcsedu@gmail.com"
     },
     {
-      "name": "Professor John Doe",
+      "name": "Dr. Mosaddek Hossain Kamal",
       "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "reference": "Professor at Department of Computer Science and Engineering <br> University of Dhaka <br> Email : tushar@cse.du.ac.bd"
     }
   ]
+  // "projects": [
+  //   {
+  //     "name": "Quantum Computing",
+  //     "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
+  //     "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
+  //     "startDate": "2018-01-01",
+  //     "endDate": "2018-01-01",
+  //     "url": "https://example.com"
+  //   }
+  // ]
 }

@@ -36,6 +36,23 @@ I am passionate about advancing machine understanding for low-resource languages
 
 I am actively looking for graduate opportunities to further contribute to research in NLP, multimodal AI, and medical AI, aiming to collaborate with forward-thinking teams and push the boundaries of intelligent, inclusive, and impactful AI systems.
 
+<!-- ---
+
+### Current Research Directions
+
+**1. Medical Visual Question Answering (VQA) and Explainability**  
+Developing a large-scale dataset (15K VQA pairs) to improve visual reasoning and interpretability in medical image understanding.  
+
+**2. Medical Vision-Language Model (VLM) Linear Projection**  
+Investigating how VLMs capture subtle diagnostic cues in medical imaging and exploring the effect of linear projection layers on alignment and performance.  
+
+**3. Medical Prompt Learning**  
+Designing effective prompting strategies to enhance few-shot and cross-modal learning in medical AI applications.  
+
+**4. Improved LoRA Fine-Tuning for Domain-Specific Classification**  
+Analyzing limitations of conventional LoRA fine-tuning in out-of-domain tasks and developing adaptive strategies involving further pretraining and linear probing to improve LLM performance in specialized domains. -->
+
+
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
