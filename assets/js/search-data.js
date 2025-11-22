@@ -276,17 +276,6 @@ ninja.data = [{
             window.location.href = "/blog/2022/giscus-comments/";
           
         },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
       },{id: "post-a-post-with-redirect",
         
           title: "a post with redirect",
@@ -391,16 +380,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-our-work-on-pentaml-at-blp-2025-task-1-linear-probing-of-pre-trained-transformer-based-models-for-bangla-hate-speech-detection-got-accepted-in-blp-workshop-at-aacl-ijcnlp-2025",
+          title: 'Our work on “PentaML at BLP-2025 Task 1: Linear Probing of Pre-trained Transformer-based...',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-our-work-on-benchmarking-large-language-models-on-bangla-dialect-translation-and-dialectal-sentiment-analysis-got-accepted-in-blp-workshop-at-aacl-ijcnlp-2025",
+          title: 'Our work on “Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal...',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-our-work-on-how-good-llms-are-at-answering-bangla-medical-visual-questions-dataset-and-benchmarking-got-accepted-in-aaai-2026-aimedhealth",
+          title: 'Our work on “How Good LLMs Are at Answering Bangla Medical Visual Questions?...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
