@@ -28,13 +28,13 @@ latest_posts:
 ---
 
 I am **Rafid Ahmed**, currently working as an R&D Engineer at **[Penta Global Limited](https://www.pentabd.com/)**. 
-My work focuses on Natural Language Processing (NLP) and Multimodal AI, particularly in designing intelligent systems that can reason, align, and generalize across languages and modalities.My current work is centered on LLMs and VLMs, with a focus on Medical VQA, VLM linear projection, prompt learning, and finetuning strategies.  
+My primary research interests lie in natural language processing, multimodal AI and large language/vision-language models. I am particularly motivated to explore low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning techniques for downstream tasks and emerging efficient architectures such as Mamba. I am especially interested in how these approaches can enhance the reasoning capabilities and explainability of both VLMs and LLMs.  
 
 I am passionate about advancing machine understanding for low-resource languages and building more inclusive and interpretable AI systems.
 
 ---
 
-I am actively looking for graduate opportunities to further contribute to research in NLP, multimodal AI, and medical AI, aiming to collaborate with forward-thinking teams and push the boundaries of intelligent, inclusive, and impactful AI systems.
+I am actively looking for graduate opportunities to further contribute to research in NLP, LLM, MLLM and medical AI, aiming to collaborate with forward-thinking teams and push the boundaries of intelligent, inclusive and impactful AI systems.
 
 <!-- ---
 
