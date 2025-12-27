@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-repositories",
-          title: "Repositories",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
-        },{id: "nav-cv",
+  },{id: "nav-cv",
           title: "CV",
           description: "",
           section: "Navigation",
@@ -388,6 +381,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-our-work-on-how-good-llms-are-at-answering-bangla-medical-visual-questions-dataset-and-benchmarking-got-accepted-in-aaai-2026-aimedhealth",
           title: 'Our work on “How Good LLMs Are at Answering Bangla Medical Visual Questions?...',
+          description: "",
+          section: "News",},{id: "news-our-work-on-benchmarking-large-language-models-on-bangla-dialect-translation-and-dialectal-sentiment-analysis-got-the-best-paper-award-in-blp-workshop-at-aacl-ijcnlp-2025",
+          title: 'Our work on “Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
