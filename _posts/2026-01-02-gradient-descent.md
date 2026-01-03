@@ -4,7 +4,7 @@ title: "Gradient Descent"
 date: 2026-01-02
 description: Understanding the Gradient vector, Partial Derivatives, and Backpropagation.
 tags: math calculus deeplearning
-categories: Deep Learning
+categories: [Deep Learning]
 giscus_comments: false
 related_posts: false
 toc:
@@ -160,7 +160,7 @@ Imagine a simple computational graph where input $x$ passes through a weight $w$
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-<pre style="line-height: 1.5; font-family: monospace; background: #f8f9fa; padding: 15px; border-radius: 5px;">
+<pre style="line-height: 1.5; font-family: monospace; background: transparent; border: 1px solid rgba(127, 127, 127, 0.2); padding: 15px; border-radius: 5px;">
       [Input x] 
            \
             ( * ) ────> [ z = w·x ] ────> ( Loss L ) <──── [Target y]
