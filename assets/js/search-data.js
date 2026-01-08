@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-gradient-descent",
+        },{id: "post-a-comprehensive-guide-to-backpropagation",
+        
+          title: "A Comprehensive Guide to Backpropagation",
+        
+        description: "A complete mathematical derivation and numerical example of Backpropagation in a two-layer Neural Network.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/backpropagation/";
+          
+        },
+      },{id: "post-gradient-descent",
         
           title: "Gradient Descent",
         
