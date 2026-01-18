@@ -7,3 +7,19 @@
 
 "Vision":
   color: "#009f36"
+
+"ACL":
+  url: https://aclanthology.org/
+  color: "#c90016"  # The official ACL Anthology deep red
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#1b458f"
+
+"CVF":
+  url: https://openaccess.thecvf.com/
+  color: "#005ea5"
+
+"COLM":
+  url: https://www.mitpressjournals.org/loi/colm
+  color: "#e63946"
