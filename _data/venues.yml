@@ -23,3 +23,24 @@
 "COLM":
   url: https://www.mitpressjournals.org/loi/colm
   color: "#e63946"
+
+"IJCNLP":
+  url: https://aclanthology.org/
+  color: "#0077b6"
+
+"NeurIPS":
+  url: https://nips.cc/
+  color: "#ff6f61"
+
+"EMNLP":
+  url: https://aclanthology.org/
+  color: "#2a9d8f"
+
+"ICLR":
+  url: https://iclr.cc/
+  color: "#f4a261"
+
+"WACV":
+  url: https://openaccess.thecvf.com/WACV2024
+  color: "#264653"
+
