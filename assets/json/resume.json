@@ -27,8 +27,7 @@
       "area": "Computer Science and Engineering",
       "studyType": "B.Sc",
       "startDate": "2019",
-      "endDate": "2024",
-      "score": "3.54"
+      "endDate": "2024"
     }
   ],
   "work": [
@@ -43,7 +42,7 @@
         "<b>Cloud & Automation:</b>  Developing scalable data pipelines using AWS services (Lambda, S3, Glue, EC2 & SageMaker).",
         "<b>Generative AI:</b>  Designed and developed intelligent AI agents and copilots powered by state-of-the-art Large Language Models.",
         "<b>Current Research:</b>  Focusing on Medical Imaging & Modality, Medical VQA, Concept/Value Alignment, and Reasoning in VLMs.",
-        "<b>Publications:</b>  Co-authored papers accepted in top-tier conferences including AAAI 2026 and IJCNLP 2025."
+        "<b>Publications:</b>  Co-authored papers accepted in top-tier conferences (Core A*/A) including ACL 2026, AAAI 2026 and IJCNLP 2025."
       ]
     },
     {
