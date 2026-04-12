@@ -8,10 +8,10 @@ profile:
   align: right
   image: IMG_rafid.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Road 7, Block-G, Plot #35</p>
-    <p>Banani, Dhaka 1213</p>
-    <p>Dhaka, Bangladesh</p>
+  # more_info: >
+  #   <p>Road 7, Block-G, Plot #35</p>
+  #   <p>Banani, Dhaka 1213</p>
+  #   <p>Dhaka, Bangladesh</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
