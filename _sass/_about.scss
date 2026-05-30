@@ -1,0 +1,273 @@
+/*******************************************************************************
+ * About / Home page enhancements
+ ******************************************************************************/
+
+// ── Subtitle under the name ───────────────────────────────────────────────────
+
+.about-subtitle {
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  letter-spacing: 0.01em;
+  margin-top: -0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+// ── Profile image – subtle glow on hover ─────────────────────────────────────
+
+.profile img.img-fluid {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16) !important;
+  }
+}
+
+// ── Research interest tags ────────────────────────────────────────────────────
+
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 1.75rem 0 1.25rem;
+
+  .interests-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+    margin-right: 0.25rem;
+  }
+
+  .interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .interest-tag {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 500;
+    border: 1px solid var(--global-divider-color);
+    color: var(--global-text-color);
+    background: transparent;
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    cursor: default;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    // Accent border tints per category
+    &.tag-nlp   { border-color: rgba(181, 9, 172, 0.35); }
+    &.tag-llm   { border-color: rgba(38, 152, 186, 0.35); }
+    &.tag-med   { border-color: rgba(0, 171, 55, 0.35); }
+    &.tag-rl    { border-color: rgba(242, 145, 5, 0.35); }
+    &.tag-multi { border-color: rgba(249, 32, 128, 0.35); }
+  }
+}
+
+// ── Seeking opportunities banner ──────────────────────────────────────────────
+
+.seeking-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin: 0.25rem 0 2rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--global-theme-color);
+  background-color: var(--global-card-bg-color);
+  border-top: 1px solid var(--global-divider-color);
+  border-right: 1px solid var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+
+  .banner-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .banner-text {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: var(--global-text-color);
+
+    strong {
+      color: var(--global-text-color);
+    }
+
+    a {
+      margin-left: 0.3rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+// ── Section h2 headings (news, posts, etc.) ───────────────────────────────────
+
+article > h2 {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 32px;
+    border-radius: 2px;
+    background: var(--global-theme-color);
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+// ── Social icons – lift on hover ──────────────────────────────────────────────
+
+.social .contact-icons a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+// ── News timeline feed ────────────────────────────────────────────────────────
+
+.news-feed {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.25rem;
+
+  &.news-feed--scrollable {
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--global-divider-color) transparent;
+
+    &::-webkit-scrollbar { width: 4px; }
+    &::-webkit-scrollbar-thumb {
+      background: var(--global-divider-color);
+      border-radius: 4px;
+    }
+  }
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 3.5rem 20px 1fr;
+  column-gap: 0.65rem;
+
+  // ── Date column ──────────────────────────────────────────────
+  .news-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 0.8rem;
+    line-height: 1.25;
+
+    .news-month {
+      font-size: 0.67rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--global-theme-color);
+    }
+
+    .news-year {
+      font-size: 0.63rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  // ── Spine column (vertical line + dot) ───────────────────────
+  // The column itself draws the continuous line via background-image.
+  // Pseudos handle the dot and a short gap above it.
+  .news-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(var(--global-divider-color), var(--global-divider-color));
+    background-size: 2px 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    // Short spacer before the dot
+    &::before {
+      content: "";
+      display: block;
+      flex: 0 0 0.8rem;
+    }
+
+    // The dot – sits on top of the line
+    &::after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--global-theme-color);
+      box-shadow: 0 0 0 2px var(--global-bg-color), 0 0 0 3.5px var(--global-theme-color);
+    }
+  }
+
+  // ── Body card ─────────────────────────────────────────────────
+  .news-body {
+    padding: 0.55rem 0.85rem 0.7rem;
+    margin-bottom: 0.65rem;
+    border-radius: 8px;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-card-bg-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--global-text-color);
+    }
+
+    a.news-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover { color: var(--global-theme-color); }
+    }
+  }
+}
+
+// First item — hide line above the dot
+.news-item:first-child .news-dot {
+  background-image: none;
+}
+
+// Last item — hide line below the dot (stop at dot level)
+.news-item:last-child .news-dot {
+  background-size: 2px 0.8rem; // only draw line up to the dot, not below
+}

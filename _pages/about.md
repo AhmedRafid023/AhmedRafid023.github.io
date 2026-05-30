@@ -2,16 +2,12 @@
 layout: about
 title: Home
 permalink: /
-# subtitle: <a href='#'>R&D Engineer, Penta Global Limited</a>. Address. Contacts. Motto. Etc.
+subtitle: R&D Engineer · Deep Learning & ML Researcher
 
 profile:
   align: right
   image: IMG_rafid.jpg
   image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>Road 7, Block-G, Plot #35</p>
-  #   <p>Banani, Dhaka 1213</p>
-  #   <p>Dhaka, Bangladesh</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,32 +23,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am **Rafid Ahmed**, currently working as an R&D Engineer at **[Penta Global Limited](https://www.pentabd.com/)**. 
-My primary research interests lie in natural language processing, multimodal AI and large language/vision-language models. I am particularly motivated to explore low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning techniques for downstream tasks and Reinforcement Learning. I am especially interested in how these approaches can enhance the reasoning capabilities and explainability of both VLMs and LLMs.  
+I am an R&D Engineer at **[Penta Global Limited](https://www.pentabd.com/)** with a deep focus on **natural language processing**, **multimodal AI**, and **large language / vision-language models**. My work spans low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning (LoRA and beyond), and Reinforcement Learning — with a particular emphasis on improving the **reasoning capabilities** and **explainability** of both VLMs and LLMs.
 
+I am especially excited about how these techniques can make AI systems more inclusive, interpretable and impactful in real-world settings, including healthcare.
 
 ---
 
-I am actively looking for graduate opportunities to further contribute to research in NLP, LLM, MLLM, RL and medical AI, aiming to collaborate with forward-thinking teams and push the boundaries of intelligent, inclusive and impactful AI systems.If you are interested in working with me or discussing potential collaborations, please feel free to [connect](mailto:ahmedrafid023@gmail.com).
-
-<!-- ---
-
-### Current Research Directions
-
-**1. Medical Visual Question Answering (VQA) and Explainability**  
-Developing a large-scale dataset (15K VQA pairs) to improve visual reasoning and interpretability in medical image understanding.  
-
-**2. Medical Vision-Language Model (VLM) Linear Projection**  
-Investigating how VLMs capture subtle diagnostic cues in medical imaging and exploring the effect of linear projection layers on alignment and performance.  
-
-**3. Medical Prompt Learning**  
-Designing effective prompting strategies to enhance few-shot and cross-modal learning in medical AI applications.  
-
-**4. Improved LoRA Fine-Tuning for Domain-Specific Classification**  
-Analyzing limitations of conventional LoRA fine-tuning in out-of-domain tasks and developing adaptive strategies involving further pretraining and linear probing to improve LLM performance in specialized domains. -->
-
-
-
-<!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+If you are interested in working together or discussing potential collaborations, feel free to [reach out](mailto:ahmedrafid023@gmail.com) — I am always happy to connect.
