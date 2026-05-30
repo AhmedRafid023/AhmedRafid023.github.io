@@ -11,7 +11,9 @@ layout: default
         {{ site.title }}
       {% endif %}
     </h1>
-    <p class="desc">{{ page.subtitle }}</p>
+    {% if page.subtitle %}
+      <p class="desc about-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
   </header>
 
   <article>
@@ -22,8 +24,7 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
@@ -40,10 +41,34 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- Research interest tags -->
+    <div class="research-interests">
+      <span class="interests-label">Research Interests</span>
+      <div class="interest-tags">
+        <span class="interest-tag tag-nlp">Natural Language Processing</span>
+        <span class="interest-tag tag-llm">Large Language Models</span>
+        <span class="interest-tag tag-multi">Multimodal AI</span>
+        <span class="interest-tag tag-med">Medical AI</span>
+        <span class="interest-tag tag-llm">Vision-Language Models</span>
+        <span class="interest-tag tag-rl">Reinforcement Learning</span>
+        <span class="interest-tag tag-nlp">Parameter-Efficient Fine-Tuning</span>
+        <span class="interest-tag tag-med">Low-Resource Learning</span>
+      </div>
+    </div>
+
+    <!-- Seeking opportunities banner -->
+    <div class="seeking-banner">
+      <span class="banner-icon">🎓</span>
+      <div class="banner-text">
+        <strong>Open to research collaborations in Computer Vision, NLP, VLMs, Medical AI, and RL.</strong>
+        <a href="mailto:ahmedrafid023@gmail.com">Get in touch →</a>
+      </div>
+    </div>
+
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -68,7 +93,6 @@ layout: default
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">{% include social.liquid %}</div>
-
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
