@@ -1,4 +1,4 @@
-github_users: 
+github_users:
   - AhmedRafid023
 
 repo_description_lines_max: 2
@@ -6,7 +6,7 @@ repo_description_lines_max: 2
 github_repos:
   - AhmedRafid023/med-vqa-LoRA
   - AhmedRafid023/AhmedRafid023.github.io
-  - AhmedRafid023/Express-backend-server 
+  - AhmedRafid023/Express-backend-server
   - AhmedRafid023/movie-app
-  - AhmedRafid023/book-recommender 
+  - AhmedRafid023/book-recommender
   # - AhmedRafid023/Medical-Visual-Question-Answering

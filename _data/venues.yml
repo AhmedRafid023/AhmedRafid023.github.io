@@ -10,7 +10,7 @@
 
 "ACL":
   url: https://aclanthology.org/
-  color: "#c90016"  # The official ACL Anthology deep red
+  color: "#c90016" # The official ACL Anthology deep red
 
 "AAAI":
   url: https://aaai.org/
@@ -43,4 +43,3 @@
 "WACV":
   url: https://openaccess.thecvf.com/WACV2024
   color: "#264653"
-

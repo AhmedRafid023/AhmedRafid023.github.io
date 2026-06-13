@@ -18,7 +18,7 @@ Before we can understand how neural networks learn (via Gradient Descent), we mu
 Imagine a function $f(x, y)$ that depends on two variables. This forms a 3D surface (like a mountain terrain).
 To find the slope, we cannot just ask "what is the slope?" because the slope depends on which direction we walk.
 
-Instead, we ask: *"If we hold $y$ constant and only move $x$, how does $f$ change?"*
+Instead, we ask: _"If we hold $y$ constant and only move $x$, how does $f$ change?"_
 
 This is the **partial derivative** with respect to $x$, denoted as:
 
@@ -37,7 +37,7 @@ The **Gradient** is simply a vector that collects all these partial derivatives 
 For a function $f: \mathbb{R}^n \rightarrow \mathbb{R}$ with inputs $\mathbf{x} = [x_1, x_2, \dots, x_n]$, the gradient is:
 
 $$
-\nabla f(\mathbf{x}) = 
+\nabla f(\mathbf{x}) =
 \begin{bmatrix}
 \frac{\partial f}{\partial x_1} \\
 \frac{\partial f}{\partial x_2} \\
@@ -78,6 +78,7 @@ This is the most important concept for Machine Learning:
 > **The Gradient vector $\nabla f(\mathbf{x})$ points in the direction of the steepest ascent.**
 
 If you are standing on a mountain side (a point on the Loss landscape):
+
 1.  The **magnitude** (length) of the vector tells you how steep the slope is.
 2.  The **direction** of the vector points to the peak (uphill).
 
@@ -99,6 +100,7 @@ Imagine we initialize our weights at the point **$(3, 4)$**.
 At this position, our "Loss" (height) is $3^2 + 4^2 = 25$. We are high up on the hill.
 
 ### Step 1: Calculate the Gradient
+
 To find the slope, we compute the partial derivatives:
 
 $$
@@ -112,6 +114,7 @@ $$
 $$
 
 ### Step 2: What does this vector $[6, 8]$ mean?
+
 1.  **Direction:** The vector points in the direction of positive $x$ and positive $y$. If you look at the plot, moving "outward" (away from the center) goes **uphill**. The gradient always points to the peak.
 2.  **Magnitude:** The steepness is $\sqrt{6^2 + 8^2} = 10$. This is a steep slope!
 
@@ -133,11 +136,14 @@ $$
 $$
 
 ### The Result
+
 We moved from $(3, 4)$ to $(2.4, 3.2)$.
 Did we improve? Let's check the new Loss:
+
 $$
 J(2.4, 3.2) = 2.4^2 + 3.2^2 = 5.76 + 10.24 = 16
 $$
+
 The Loss decreased from **25** to **16**. We have successfully taken one step towards the bottom of the bowl.
 
 ---
@@ -156,6 +162,7 @@ $$
 We cannot derive a simple formula for the gradient of this monster. Instead, we use the **Chain Rule**. This process is called **Backpropagation**.
 
 ### The Chain Rule Visualized
+
 Imagine a simple computational graph where input $x$ passes through a weight $w$ and bias $b$ to calculate a Loss $L$.
 
 <div class="row mt-3">
@@ -167,8 +174,9 @@ Imagine a simple computational graph where input $x$ passes through a weight $w$
            /
       [Weight w]
 
-FORWARD:  Move Left to Right (Calculate Loss)
+FORWARD: Move Left to Right (Calculate Loss)
 BACKWARD: Move Right to Left (Calculate Gradients)
+
 </pre>
     </div>
 </div>
@@ -183,14 +191,17 @@ $$
 $$
 
 ### Deep Learning Example
+
 Let's trace a single neuron with a squared error loss.
+
 1.  **Forward Pass:** We compute the prediction and the error.
-    * $z = w \cdot x$
-    * $L = (z - y_{true})^2$
+
+    - $z = w \cdot x$
+    - $L = (z - y_{true})^2$
 
 2.  **Backward Pass (Calculating Gradient):**
-    We want to know: *How does changing the weight $w$ affect the Loss $L$?*
-    
+    We want to know: _How does changing the weight $w$ affect the Loss $L$?_
+
     We start from the Loss and work backward:
 
 $$
@@ -198,8 +209,9 @@ $$
 $$
 
 Let's calculate the pieces:
-* $\frac{\partial L}{\partial z} = 2(z - y_{true})$
-* $\frac{\partial z}{\partial w} = x$
+
+- $\frac{\partial L}{\partial z} = 2(z - y_{true})$
+- $\frac{\partial z}{\partial w} = x$
 
 So the gradient for weight $w$ is:
 

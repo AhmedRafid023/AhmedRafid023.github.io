@@ -55,47 +55,37 @@
     }
   ],
   "skills": [
-  {
-    "name": "Programming Languages",
-    "level": "Master",
-    "icon": "fa-solid fa-code",
-    "keywords": [
-      "Python, C, C++, JavaScript, Java, Kotlin, PHP"
-    ]
-  },
-  {
-    "name": "Deep Learning Tools",
-    "level": "Master",
-    "icon": "fa-solid fa-brain",
-    "keywords": [
-      "Pytorch, Huggingface, Tensorflow, TIMM"
-    ]
-  },
-  {
-    "name": "Large Language Models",
-    "level": "Master",
-    "icon": "fa-solid fa-robot",
-    "keywords": [
-      "RAG, GraphRAG, Multimodal RAG, LLM Agents, Web Agent"
-    ]
-  },
-  {
-    "name": "LLM Tools",
-    "level": "Master",
-    "icon": "fa-solid fa-toolbox",
-    "keywords": [
-      "LangChain, LlamaIndex, Chroma, VLLM, OLLaMa, Faiss Vector Search"
-    ]
-  },
-  {
-    "name": "Other Tools",
-    "level": "Master",
-    "icon": "fa-solid fa-wrench",
-    "keywords": [
-      "Scikit-Learn, Numpy, SciPy, Pandas, NLTK, Plotly"
-    ]
-  }
-],
+    {
+      "name": "Programming Languages",
+      "level": "Master",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python, C, C++, JavaScript, Java, Kotlin, PHP"]
+    },
+    {
+      "name": "Deep Learning Tools",
+      "level": "Master",
+      "icon": "fa-solid fa-brain",
+      "keywords": ["Pytorch, Huggingface, Tensorflow, TIMM"]
+    },
+    {
+      "name": "Large Language Models",
+      "level": "Master",
+      "icon": "fa-solid fa-robot",
+      "keywords": ["RAG, GraphRAG, Multimodal RAG, LLM Agents, Web Agent"]
+    },
+    {
+      "name": "LLM Tools",
+      "level": "Master",
+      "icon": "fa-solid fa-toolbox",
+      "keywords": ["LangChain, LlamaIndex, Chroma, VLLM, OLLaMa, Faiss Vector Search"]
+    },
+    {
+      "name": "Other Tools",
+      "level": "Master",
+      "icon": "fa-solid fa-wrench",
+      "keywords": ["Scikit-Learn, Numpy, SciPy, Pandas, NLTK, Plotly"]
+    }
+  ],
   "languages": [
     {
       "language": "Bangla",

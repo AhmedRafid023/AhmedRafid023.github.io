@@ -25,9 +25,8 @@ Backpropagation is the core algorithm used to train neural networks. It efficien
   caption="Figure 1: Architecture of the two-layer neural network used in this derivation, illustrating the forward pass (blue arrows) and backpropagation of errors (red dashed arrows)."
 %}
 
-
-
 The network architecture is:
+
 $$
 \text{Input } (3) \;\rightarrow\; \text{Hidden } (5) \;\rightarrow\; \text{Output } (3)
 $$
@@ -37,21 +36,25 @@ $$
 ### Network Architecture
 
 Let the input vector be:
+
 $$
 x \in \mathbb{R}^{3}
 $$
 
 The first linear layer is defined as:
+
 $$
 z = W_1 x + b_1, \quad W_1 \in \mathbb{R}^{5 \times 3}, \; b_1 \in \mathbb{R}^{5}
 $$
 
 A ReLU activation is applied:
+
 $$
 h = \text{ReLU}(z)
 $$
 
 The second linear layer is:
+
 $$
 y = W_2 h + b_2, \quad W_2 \in \mathbb{R}^{3 \times 5}, \; b_2 \in \mathbb{R}^{3}
 $$
@@ -61,6 +64,7 @@ $$
 ### ReLU Activation
 
 The Rectified Linear Unit (ReLU) is defined element-wise as:
+
 $$
 \text{ReLU}(z_i) = \max(0, z_i)
 $$
@@ -84,6 +88,7 @@ $$
 ### Define the Input
 
 Let the input vector be:
+
 $$
 x =
 \begin{bmatrix}
@@ -92,6 +97,7 @@ x =
 3
 \end{bmatrix}
 $$
+
 **Shape:** $(3 \times 1)$
 
 ### First Linear Layer ($3 \to 5$)
@@ -99,6 +105,7 @@ $$
 #### Weights and Bias
 
 Weight matrix $W_1$ ($5 \times 3$):
+
 $$
 W_1 =
 \begin{bmatrix}
@@ -111,6 +118,7 @@ W_1 =
 $$
 
 Bias $b_1$ ($5 \times 1$):
+
 $$
 b_1 =
 \begin{bmatrix}
@@ -126,7 +134,7 @@ $$
 
 First, we calculate the linear pre-activation output $z = W_1 x + b_1$.
 
-Compute the matrix-vector product $W_1 x$: 
+Compute the matrix-vector product $W_1 x$:
 
 $$
 W_1 x =
@@ -152,7 +160,7 @@ W_1 x =
 \end{bmatrix}
 $$
 
-Add the bias vector $b_1$: 
+Add the bias vector $b_1$:
 
 $$
 z =
@@ -221,6 +229,7 @@ $$
 #### Weights and Bias
 
 Weight matrix $W_2$ ($3 \times 5$):
+
 $$
 W_2 =
 \begin{bmatrix}
@@ -231,6 +240,7 @@ W_2 =
 $$
 
 Bias $b_2$ ($3 \times 1$):
+
 $$
 b_2 =
 \begin{bmatrix}
@@ -243,6 +253,7 @@ $$
 #### Linear Transformation
 
 The transformation is defined as:
+
 $$
 y = W_2 h + b_2
 $$
@@ -272,6 +283,7 @@ W_2 h &=
 $$
 
 Now, add the bias vector $b_2$:
+
 $$
 y =
 \begin{bmatrix}
@@ -308,10 +320,7 @@ $$
 
 **Shape:** $(3 \times 1)$
 
-<br>
----
-
-
+## <br>
 
 ## Loss Function
 
@@ -332,6 +341,7 @@ $$
 $$
 
 In vector form:
+
 $$
 \delta^{(2)} = \frac{\partial L}{\partial y} = y - t
 $$
@@ -339,13 +349,14 @@ $$
 ### Gradients for the Second Layer
 
 The output layer is:
+
 $$
 y = W_2 h + b_2
 $$
 
 #### Derivative with Respect to a Single Weight
 
-For a single weight $W_{2_{ij}}$: 
+For a single weight $W_{2_{ij}}$:
 
 $$
 y_i = \sum_{k=1}^{5} W_{2_{ik}} h_k + b_{2_i}
@@ -394,7 +405,6 @@ $$
 $$
 
 <br>
-
 
 ### Backpropagating to the Hidden Layer
 
@@ -458,6 +468,7 @@ $$
 W_2 \leftarrow W_2 - \eta \, \delta^{(2)} h^T, \quad
 b_2 \leftarrow b_2 - \eta \, \delta^{(2)}
 $$
+
 $$
 W_1 \leftarrow W_1 - \eta \, \delta^{(z)} x^T, \quad
 b_1 \leftarrow b_1 - \eta \, \delta^{(z)}
@@ -510,8 +521,6 @@ With these values, we can now update $W_1, b_1, W_2, b_2$ using the formulas der
 
 ---
 
-
-
 ## The Vanishing and Exploding Gradient Problem
 
 In the derivations above, we saw that the gradient for the first layer depends on the product of the weights and error signals from later layers:
@@ -525,27 +534,31 @@ In a very deep neural network (many layers), the gradient at an early layer $l$ 
 $$
 \frac{\partial L}{\partial W_l} \propto \underbrace{W_{L}^T \cdot D_{L} \cdot W_{L-1}^T \cdot D_{L-1} \dots}_{\text{Repeated Multiplication}}
 $$
+
 where $D$ represents the diagonal matrix of the derivative of the activation functions.
 
 ### Vanishing Gradients
+
 The vanishing gradient problem occurs when the elements of the chain rule are smaller than 1 (e.g., small weights or activation derivatives $< 1$). As these small numbers are multiplied repeatedly during backpropagation from the output layer to the input layer, the gradient signal shrinks exponentially.
 
-
-
-* **Cause:** Traditional activation functions like **Sigmoid** or **Tanh** have derivatives that are always less than 1 (max 0.25 for Sigmoid).
-* **Effect:** The weights in the earlier layers of the network stop updating because their gradients become effectively zero. The network fails to learn features in the early layers.
+- **Cause:** Traditional activation functions like **Sigmoid** or **Tanh** have derivatives that are always less than 1 (max 0.25 for Sigmoid).
+- **Effect:** The weights in the earlier layers of the network stop updating because their gradients become effectively zero. The network fails to learn features in the early layers.
 
 ### Exploding Gradients
+
 Conversely, if the weights or derivatives are large ($> 1$), repeated multiplication causes the gradients to grow exponentially as they move backward.
 
-* **Cause:** Poor weight initialization or lack of normalization.
-* **Effect:** The weight updates become massive, causing the model parameters to oscillate wildly or diverge to `NaN` (Not a Number).
+- **Cause:** Poor weight initialization or lack of normalization.
+- **Effect:** The weight updates become massive, causing the model parameters to oscillate wildly or diverge to `NaN` (Not a Number).
 
 <br>
 
 ### Why ReLU Helps
+
 In our derivation, we used the **ReLU** activation function.
+
 $$
 \frac{d}{dz} \text{ReLU}(z) = \begin{cases} 1 & \text{if } z > 0 \\ 0 & \text{if } z \le 0 \end{cases}
 $$
+
 Because the derivative is exactly **1** for positive inputs, the gradient signal does not diminish as it passes through active neurons, regardless of network depth. This property makes ReLU (and its variants) essential for training deep networks, effectively solving the vanishing gradient problem for positive activation paths.

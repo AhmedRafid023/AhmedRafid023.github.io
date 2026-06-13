@@ -58,9 +58,8 @@ layout: default
 
     <!-- Seeking opportunities banner -->
     <div class="seeking-banner">
-      <span class="banner-icon">🎓</span>
       <div class="banner-text">
-        <strong>Open to research collaborations in Computer Vision, NLP, VLMs, Medical AI, and RL.</strong>
+        <strong>Open to research collaborations</strong> in Computer Vision, NLP, VLMs, Medical AI &amp; RL.
         <a href="mailto:ahmedrafid023@gmail.com">Get in touch →</a>
       </div>
     </div>
@@ -68,7 +67,7 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -76,7 +75,7 @@ layout: default
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}
       <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+        <a href="{{ '/blog/' | relative_url }}">Latest Posts</a>
       </h2>
       {% include latest_posts.liquid %}
     {% endif %}
@@ -84,7 +83,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
