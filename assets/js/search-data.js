@@ -92,7 +92,7 @@ ninja.data = [{
           title: 'Our work on “Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal...',
           description: "",
           section: "News",},{id: "news-exciting-news-our-work-on-evaluating-large-vision-language-models-on-bangla-medical-visual-question-answering-has-been-accepted-at-the-2026-meeting-of-the-association-for-computational-linguistics-acl-san-diego-california",
-          title: 'Exciting news! 🎉 Our work on “Evaluating Large Vision Language Models on Bangla...',
+          title: 'Exciting news! Our work on “Evaluating Large Vision Language Models on Bangla Medical...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
