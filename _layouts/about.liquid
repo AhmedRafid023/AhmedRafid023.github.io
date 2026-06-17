@@ -39,7 +39,30 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <!-- About Me box — sits beside the floated photo -->
+    <div class="about-section-box">
+      <h2 class="about-section-title">About Me</h2>
+      <div class="clearfix">{{ content }}</div>
+    </div>
+
+    <!-- Clear the float so Research Direction spans full width -->
+    <div style="clear: both;"></div>
+
+    <!-- Research Direction — full width below the photo+bio row -->
+    <div class="about-section-box research-direction-box">
+      <h2 class="about-section-title">Research Direction</h2>
+      <div class="research-direction-content">
+        <p>I began my AI research journey through <strong>NLP and VLMs</strong>, motivated by the potential to make AI systems more inclusive, interpretable, and impactful. I am especially excited about how these techniques can improve real-world applications including healthcare and low-resource settings.</p>
+        <p>I am particularly interested in the intersection of:</p>
+        <ul>
+          <li><a href="/publications/">Large Language &amp; Vision-Language Models</a> with reasoning and explainability</li>
+          <li><a href="/publications/">Medical AI</a> — applying LLMs and VLMs in healthcare</li>
+          <li><a href="/publications/">Multimodal Reasoning</a> and parameter-efficient fine-tuning (LoRA)</li>
+          <li><a href="/publications/">Reinforcement Learning</a> for improving model capabilities</li>
+        </ul>
+      </div>
+    </div>
+
 
     <!-- Research interest tags -->
     <div class="research-interests">

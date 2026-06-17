@@ -7,41 +7,28 @@
 // Change width/height to resize. Use !important to override the HTML attribute.
 :root {
   --profile-photo-width: 235px;
-  --profile-photo-height: 235px;
+  --profile-photo-height: 270px;
   --profile-photo-radius: 20px;
   --profile-photo-fit: cover; // cover | contain | fill
   --profile-photo-position: 50% 20%; // ← tweak this to reframe the crop
 }
 
-// ── Subtitle under the name ───────────────────────────────────────────────────
-
-.about-subtitle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--global-theme-color);
-  margin-top: 0.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.85;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: var(--global-theme-color);
-    border-radius: 2px;
-    opacity: 0.6;
-  }
-}
-
-// ── Profile photo ─────────────────────────────────────────────────────────────
+// ── Profile photo (original al-folio float layout) ────────────────────────────
 
 .profile {
+  width: var(--profile-photo-width);
+  margin-bottom: 1rem;
+
+  &.float-left {
+    float: left;
+    margin-right: 2rem;
+  }
+
+  &.float-right {
+    float: right;
+    margin-left: 2rem;
+  }
+
   figure,
   picture {
     display: block;
@@ -89,15 +76,108 @@
   }
 }
 
+
+
+// ── Subtitle under the name ───────────────────────────────────────────────────
+
+.about-subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 2px;
+    background: var(--global-theme-color);
+    border-radius: 2px;
+    opacity: 0.6;
+  }
+}
+
+
+
+// ── About / Research Direction section boxes ──────────────────────────────────
+
+.about-section-box {
+  overflow: hidden; // BFC — sits cleanly beside the floated photo
+  background: var(--global-card-bg-color, rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem 1.2rem;
+  margin-bottom: 1.4rem;
+  transition: box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.about-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--global-theme-color) !important;
+  margin: 0 0 0.85rem !important;
+  padding: 0 !important;
+  text-transform: none !important;
+  border: none !important;
+
+  &::after {
+    display: none !important;
+  }
+}
+
+.research-direction-content {
+  ul {
+    margin: 0.5rem 0 0 1.1rem;
+    padding: 0;
+
+    li {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--global-text-color);
+      margin-bottom: 0.2rem;
+
+      a {
+        font-weight: 600;
+        color: var(--global-theme-color);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.18s ease;
+
+        &:hover {
+          border-bottom-color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
 // ── Body text ─────────────────────────────────────────────────────────────────
 
-article > .clearfix {
+.about-section-box .clearfix,
+article>.clearfix {
+
   // Slightly airier paragraph text
   p {
     font-size: 0.96rem;
     line-height: 1.85;
     color: var(--global-text-color);
     margin-bottom: 0.9rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   // Styled horizontal rule that separates intro sections
@@ -243,7 +323,7 @@ article > .clearfix {
 
 // ── Section headings ──────────────────────────────────────────────────────────
 
-article > h2 {
+article>h2 {
   position: relative;
   font-size: 1.05rem;
   font-weight: 700;
@@ -424,15 +504,61 @@ article > h2 {
   background-size: 1px 0.8rem;
 }
 
-// ── Dark mode tweaks ──────────────────────────────────────────────────────────
-
 html[data-theme="dark"] {
   .interest-tag:hover {
     background: rgba(255, 255, 255, 0.04);
   }
 
   .seeking-banner {
-    border-color: #3a3a3e;
+    border-color: #2a2b3d;
     border-left-color: var(--global-theme-color);
+  }
+}
+
+// ── Mobile responsive layout ──────────────────────────────────────────────────
+
+@media (max-width: 640px) {
+  // Clear the float — photo stacks above the About Me box
+  .profile.float-left,
+  .profile.float-right {
+    float: none !important;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 1.5rem !important;
+    text-align: center;
+  }
+
+  // Photo itself shrinks to fit
+  .profile img.img-fluid {
+    width: 180px !important;
+    max-width: 180px !important;
+    height: 180px !important;
+  }
+
+  // Boxes take full width
+  .about-section-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  // Make sure nothing overflows
+  article {
+    overflow-x: hidden;
+  }
+}
+
+// Tablet: slightly smaller photo, keeps float layout
+@media (min-width: 641px) and (max-width: 768px) {
+  .profile {
+    --profile-photo-width: 180px;
+    --profile-photo-height: 200px;
+    width: 180px;
+  }
+
+  .profile img.img-fluid {
+    width: 180px !important;
+    max-width: 180px !important;
+    height: 200px !important;
   }
 }
