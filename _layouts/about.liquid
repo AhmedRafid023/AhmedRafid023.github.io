@@ -12,7 +12,7 @@ layout: default
       {% endif %}
     </h1>
     {% if page.subtitle %}
-      <p class="desc about-subtitle">{{ page.subtitle }}</p>
+      <p class="desc">{{ page.subtitle }}</p>
     {% endif %}
   </header>
 
@@ -33,59 +33,15 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+
+        <div class="profile-meta">
+          <p class="profile-role">Ph.D. Student</p>
+          <p class="profile-affil">University of Central Florida</p>
+        </div>
       </div>
     {% endif %}
 
-    <!-- About Me box — sits beside the floated photo -->
-    <div class="about-section-box">
-      <h2 class="about-section-title">About Me</h2>
-      <div class="clearfix">{{ content }}</div>
-    </div>
-
-    <!-- Clear the float so Research Direction spans full width -->
-    <div style="clear: both;"></div>
-
-    <!-- Research Direction — full width below the photo+bio row -->
-    <div class="about-section-box research-direction-box">
-      <h2 class="about-section-title">Research Direction</h2>
-      <div class="research-direction-content">
-        <p>I began my AI research journey through <strong>NLP and VLMs</strong>, motivated by the potential to make AI systems more inclusive, interpretable, and impactful. I am especially excited about how these techniques can improve real-world applications including healthcare and low-resource settings.</p>
-        <p>I am particularly interested in the intersection of:</p>
-        <ul>
-          <li><a href="/publications/">Large Language &amp; Vision-Language Models</a> with reasoning and explainability</li>
-          <li><a href="/publications/">Medical AI</a> — applying LLMs and VLMs in healthcare</li>
-          <li><a href="/publications/">Multimodal Reasoning</a> and parameter-efficient fine-tuning (LoRA)</li>
-          <li><a href="/publications/">Reinforcement Learning</a> for improving model capabilities</li>
-        </ul>
-      </div>
-    </div>
-
-
-    <!-- Research interest tags -->
-    <div class="research-interests">
-      <span class="interests-label">Research Interests</span>
-      <div class="interest-tags">
-        <span class="interest-tag tag-nlp">Natural Language Processing</span>
-        <span class="interest-tag tag-llm">Large Language Models</span>
-        <span class="interest-tag tag-multi">Multimodal AI</span>
-        <span class="interest-tag tag-med">Medical AI</span>
-        <span class="interest-tag tag-llm">Vision-Language Models</span>
-        <span class="interest-tag tag-rl">Reinforcement Learning</span>
-        <span class="interest-tag tag-nlp">Parameter-Efficient Fine-Tuning</span>
-        <span class="interest-tag tag-med">Low-Resource Learning</span>
-      </div>
-    </div>
-
-    <!-- Seeking opportunities banner -->
-    <div class="seeking-banner">
-      <div class="banner-text">
-        <strong>Open to research collaborations</strong> in Computer Vision, NLP, VLMs, Medical AI &amp; RL.
-        <a href="mailto:ahmedrafid023@gmail.com">Get in touch →</a>
-      </div>
-    </div>
+    <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
@@ -117,10 +73,6 @@ layout: default
         <div class="contact-icons">{% include social.liquid %}</div>
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
-    {% endif %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
     {% endif %}
   </article>
 </div>

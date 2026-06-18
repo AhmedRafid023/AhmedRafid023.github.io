@@ -2,14 +2,14 @@
 layout: about
 title: Home
 permalink: /
-subtitle: PhD Student · Deep Learning & ML Researcher
+subtitle: Incoming CS Ph.D. Student · AI Engineer
 
 profile:
-  align: left
+  align: right
   image: IMG_rafid.jpg
   image_circular: false # crops the image to make it circular
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -23,4 +23,14 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming **Computer Science Ph.D. student** at the University of Central Florida, where I will be supervised by [Dr. Zhenyi Wang](https://joey-wang123.github.io/). Currently, I work as an AI Engineer at [Penta Global Limited](https://www.pentabd.com/) with a focus on natural language processing, multimodal reasoning and large language / vision-language models. My work spans low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning (LoRA), and Reinforcement Learning — with a particular emphasis on improving the reasoning capabilities and explainability of both VLMs and LLMs.
+I am an incoming **Computer Science Ph.D. student** at the University of Central Florida, where I will be supervised by [Dr. Zhenyi Wang](https://joey-wang123.github.io/). Currently, I work as an AI Engineer at [Penta Global Limited](https://www.pentabd.com/), where we collaborate with [Neustring](https://neustring.com/) to build agentic solutions for major telecommunication companies. My focus is on natural language processing, multimodal reasoning, and large language / vision-language models.
+
+I began my research journey through **NLP and VLMs**, motivated by the potential to make AI systems more inclusive, interpretable, and impactful. My work spans low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning (LoRA), and Reinforcement Learning — with a particular emphasis on improving the reasoning capabilities and explainability of both VLMs and LLMs.
+
+### Research Interests
+
+- **Large Language & Vision-Language Models**: reasoning, explainability, and parameter-efficient fine-tuning (LoRA)
+- **Medical AI**: applying LLMs and VLMs to healthcare and clinical reasoning
+- **Multimodal Reasoning**: bridging language and vision for real-world tasks
+- **Reinforcement Learning**: improving model capabilities and alignment
+- **Low-Resource Learning**: building inclusive AI for under-represented languages

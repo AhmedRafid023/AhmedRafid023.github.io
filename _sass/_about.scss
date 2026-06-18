@@ -1,19 +1,28 @@
 /*******************************************************************************
- * About page – clean modern redesign
+ * About page – clean minimal layout
  ******************************************************************************/
 
-// ── Photo crop controls – edit these to reframe the profile picture ───────────
-// Change object-position to shift the crop: "top center", "center", "50% 20%", etc.
-// Change width/height to resize. Use !important to override the HTML attribute.
+// ── Photo crop/size controls ──────────────────────────────────────────────────
 :root {
-  --profile-photo-width: 235px;
-  --profile-photo-height: 270px;
-  --profile-photo-radius: 20px;
-  --profile-photo-fit: cover; // cover | contain | fill
-  --profile-photo-position: 50% 20%; // ← tweak this to reframe the crop
+  --profile-photo-width: 200px;
+  --profile-photo-fit: cover;
+  --profile-photo-position: 50% 20%;
 }
 
-// ── Profile photo (original al-folio float layout) ────────────────────────────
+// ── Name + subtitle ──────────────────────────────────────────────────────────
+
+.post-header .post-title {
+  margin-bottom: 0.3rem;
+}
+
+.desc {
+  font-size: 1rem;
+  color: var(--global-text-color-light);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+// ── Profile photo (float layout, minsuukim style) ─────────────────────────────
 
 .profile {
   width: var(--profile-photo-width);
@@ -32,164 +41,49 @@
   figure,
   picture {
     display: block;
-    text-align: center;
+    margin: 0;
   }
 
   img.img-fluid {
     display: block;
     width: var(--profile-photo-width) !important;
     max-width: var(--profile-photo-width) !important;
-    height: var(--profile-photo-height) !important;
-    margin: 0 auto;
-    border-radius: var(--profile-photo-radius);
+    height: auto !important;
     object-fit: var(--profile-photo-fit);
     object-position: var(--profile-photo-position);
-    box-shadow:
-      0 0 0 3px var(--global-bg-color),
-      0 0 0 4.5px var(--global-theme-color),
-      0 16px 48px rgba(0, 0, 0, 0.12);
-    transition:
-      transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
-      box-shadow 0.4s ease;
-
-    &:hover {
-      transform: scale(1.03) translateY(-4px);
-      box-shadow:
-        0 0 0 3px var(--global-bg-color),
-        0 0 0 4.5px var(--global-theme-color),
-        0 28px 60px rgba(0, 0, 0, 0.18) !important;
-    }
   }
 
-  .more-info {
-    margin-top: 1rem;
+  // ── Text under the photo (role + affiliation) ───────────────────────────────
+  .profile-meta {
+    margin-top: 0.9rem;
     text-align: center;
-    font-family: ui-monospace, "SF Mono", "Fira Code", monospace;
-    font-size: 0.76rem;
-    color: var(--global-text-color-light);
-    line-height: 1.75;
 
-    p {
-      display: block;
+    .profile-role {
       margin: 0;
-    }
-  }
-}
-
-
-
-// ── Subtitle under the name ───────────────────────────────────────────────────
-
-.about-subtitle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--global-theme-color);
-  margin-top: 0.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.85;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: var(--global-theme-color);
-    border-radius: 2px;
-    opacity: 0.6;
-  }
-}
-
-
-
-// ── About / Research Direction section boxes ──────────────────────────────────
-
-.about-section-box {
-  overflow: hidden; // BFC — sits cleanly beside the floated photo
-  background: var(--global-card-bg-color, rgba(255, 255, 255, 0.04));
-  border: 1px solid var(--global-divider-color);
-  border-radius: 14px;
-  padding: 1.4rem 1.6rem 1.2rem;
-  margin-bottom: 1.4rem;
-  transition: box-shadow 0.25s ease;
-
-  &:hover {
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  }
-}
-
-.about-section-title {
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--global-theme-color) !important;
-  margin: 0 0 0.85rem !important;
-  padding: 0 !important;
-  text-transform: none !important;
-  border: none !important;
-
-  &::after {
-    display: none !important;
-  }
-}
-
-.research-direction-content {
-  ul {
-    margin: 0.5rem 0 0 1.1rem;
-    padding: 0;
-
-    li {
-      font-size: 0.95rem;
-      line-height: 1.75;
+      font-size: 1.05rem;
+      font-weight: 700;
       color: var(--global-text-color);
-      margin-bottom: 0.2rem;
+    }
 
-      a {
-        font-weight: 600;
-        color: var(--global-theme-color);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-        transition: border-color 0.18s ease;
-
-        &:hover {
-          border-bottom-color: var(--global-theme-color);
-        }
-      }
+    .profile-affil {
+      margin: 0.15rem 0 0;
+      font-size: 0.9rem;
+      color: var(--global-theme-color);
     }
   }
 }
 
-// ── Body text ─────────────────────────────────────────────────────────────────
+// ── Bio body text ─────────────────────────────────────────────────────────────
 
-.about-section-box .clearfix,
-article>.clearfix {
-
-  // Slightly airier paragraph text
+article > .clearfix {
   p {
-    font-size: 0.96rem;
-    line-height: 1.85;
+    font-size: 1rem;
+    line-height: 1.7;
     color: var(--global-text-color);
-    margin-bottom: 0.9rem;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  // Styled horizontal rule that separates intro sections
-  hr {
-    border: none;
-    height: 1px;
-    background: var(--global-divider-color);
-    margin: 1.4rem 0;
+    margin-bottom: 1rem;
   }
 
   a {
-    font-weight: 600;
     color: var(--global-theme-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
@@ -199,142 +93,36 @@ article>.clearfix {
       border-bottom-color: var(--global-theme-color);
     }
   }
-}
 
-// ── Research interest tags ────────────────────────────────────────────────────
-
-.research-interests {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.45rem;
-  margin: 1.5rem 0 1rem;
-
-  .interests-label {
-    font-size: 0.65rem;
+  h3 {
+    font-size: 1.15rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--global-text-color-light);
-    white-space: nowrap;
-    margin-right: 0.2rem;
-  }
-
-  .interest-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.35rem;
-  }
-
-  .interest-tag {
-    display: inline-block;
-    padding: 0.2rem 0.65rem;
-    border-radius: 999px;
-    font-size: 0.76rem;
-    font-weight: 500;
-    border: 1px solid var(--global-divider-color);
+    margin: 1.8rem 0 0.8rem;
     color: var(--global-text-color);
-    background: transparent;
-    transition:
-      border-color 0.2s ease,
-      color 0.2s ease,
-      transform 0.2s ease;
-    cursor: default;
-
-    &:hover {
-      transform: translateY(-2px);
-      border-color: var(--global-theme-color);
-      color: var(--global-theme-color);
-    }
-
-    // Accent border tints per category
-    &.tag-nlp {
-      border-color: rgba(181, 9, 172, 0.35);
-    }
-
-    &.tag-llm {
-      border-color: rgba(38, 152, 186, 0.35);
-    }
-
-    &.tag-med {
-      border-color: rgba(0, 171, 55, 0.35);
-    }
-
-    &.tag-rl {
-      border-color: rgba(242, 145, 5, 0.35);
-    }
-
-    &.tag-multi {
-      border-color: rgba(249, 32, 128, 0.35);
-    }
-  }
-}
-
-// ── Status / collaboration banner ─────────────────────────────────────────────
-
-.seeking-banner {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin: 1rem 0 2rem;
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  background-color: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-left: 2.5px solid var(--global-theme-color);
-  transition:
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-
-  &:hover {
-    border-color: var(--global-theme-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   }
 
-  .banner-icon {
-    font-size: 1rem;
-    flex-shrink: 0;
-    opacity: 0.85;
-  }
+  ul {
+    margin: 0 0 1rem 1.1rem;
+    padding: 0;
 
-  .banner-text {
-    font-size: 0.84rem;
-    line-height: 1.55;
-    color: var(--global-text-color);
-
-    strong {
+    li {
+      font-size: 0.97rem;
+      line-height: 1.7;
       color: var(--global-text-color);
-      font-weight: 600;
-    }
-
-    a {
-      margin-left: 0.35rem;
-      font-weight: 600;
-      white-space: nowrap;
-      color: var(--global-theme-color);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      margin-bottom: 0.3rem;
     }
   }
 }
 
-// ── Section headings ──────────────────────────────────────────────────────────
+// ── Section headings (News, Selected Publications) ────────────────────────────
 
-article>h2 {
-  position: relative;
-  font-size: 1.05rem;
+article > h2 {
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--global-text-color-light);
-  padding-bottom: 0;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
+  color: var(--global-text-color);
 
-  // No underline bar — cleaner look
   &::after {
     display: none;
   }
@@ -346,21 +134,6 @@ article>h2 {
     &:hover {
       color: var(--global-theme-color) !important;
     }
-  }
-}
-
-// ── Social icons ──────────────────────────────────────────────────────────────
-
-.social .contact-icons a {
-  display: inline-block;
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-  opacity: 0.8;
-
-  &:hover {
-    transform: translateY(-3px);
-    opacity: 1;
   }
 }
 
@@ -396,7 +169,6 @@ article>h2 {
   margin-bottom: 0.25rem;
   transition: all 0.3s ease;
 
-  // Date
   .news-date {
     display: flex;
     flex-direction: column;
@@ -419,7 +191,6 @@ article>h2 {
     }
   }
 
-  // Spine
   .news-dot {
     display: flex;
     flex-direction: column;
@@ -451,25 +222,19 @@ article>h2 {
     }
   }
 
-  // Body/Text container (no box/card)
   .news-body {
     padding: 0.45rem 0.2rem 0.55rem;
     margin-bottom: 0.4rem;
-    border-radius: 0;
-    border: none;
-    background: transparent;
-    box-shadow: none;
-    transition: all 0.25s ease;
 
     p {
       margin: 0;
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       line-height: 1.6;
       color: var(--global-text-color);
     }
 
     a.news-title {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--global-text-color);
       text-decoration: none;
@@ -481,7 +246,6 @@ article>h2 {
     }
   }
 
-  // Hover animations across components
   &:hover {
     .news-dot::after {
       transform: scale(1.3);
@@ -504,61 +268,59 @@ article>h2 {
   background-size: 1px 0.8rem;
 }
 
-html[data-theme="dark"] {
-  .interest-tag:hover {
-    background: rgba(255, 255, 255, 0.04);
+// ── Bottom-of-page social icons ───────────────────────────────────────────────
+// Scoped to `.post` so these rules never touch the navbar (which also uses
+// `.social`). Icon size is left to the base styles (`.social .contact-icons`
+// = 4rem) so they stay big as before.
+
+.post .social {
+  margin-top: 2.5rem;
+
+  .contact-icons a {
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+    opacity: 0.85;
+
+    &:hover {
+      transform: translateY(-3px);
+      opacity: 1;
+    }
   }
 
-  .seeking-banner {
-    border-color: #2a2b3d;
-    border-left-color: var(--global-theme-color);
+  .contact-note {
+    margin-top: 0.8rem;
+    color: var(--global-text-color-light);
   }
 }
 
-// ── Mobile responsive layout ──────────────────────────────────────────────────
+// ── Responsive ────────────────────────────────────────────────────────────────
 
 @media (max-width: 640px) {
-  // Clear the float — photo stacks above the About Me box
   .profile.float-left,
   .profile.float-right {
     float: none !important;
-    display: block;
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
     margin: 0 auto 1.5rem !important;
     text-align: center;
   }
 
-  // Photo itself shrinks to fit
   .profile img.img-fluid {
-    width: 180px !important;
-    max-width: 180px !important;
-    height: 180px !important;
+    margin: 0 auto;
   }
 
-  // Boxes take full width
-  .about-section-box {
-    margin-left: 0;
-    margin-right: 0;
+  .profile .profile-contact {
+    align-items: center;
   }
 
-  // Make sure nothing overflows
   article {
     overflow-x: hidden;
   }
 }
 
-// Tablet: slightly smaller photo, keeps float layout
 @media (min-width: 641px) and (max-width: 768px) {
-  .profile {
-    --profile-photo-width: 180px;
-    --profile-photo-height: 200px;
-    width: 180px;
-  }
-
-  .profile img.img-fluid {
-    width: 180px !important;
-    max-width: 180px !important;
-    height: 200px !important;
+  :root {
+    --profile-photo-width: 170px;
   }
 }
