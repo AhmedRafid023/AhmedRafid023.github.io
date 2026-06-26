@@ -223,6 +223,10 @@ defaults:
 
 sass:
   style: compressed
+  quiet_deps: true # silence deprecation warnings from third-party @import deps (font-awesome, tabler-icons)
+  silence_deprecations: # al-folio still uses @import; quiet these until upstream migrates to @use
+    - import
+    - global-builtin
 
 # -----------------------------------------------------------------------------
 # Jekyll Minifier
