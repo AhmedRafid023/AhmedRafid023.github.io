@@ -23,9 +23,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming **Computer Science Ph.D. student** at the University of Central Florida, where I will be supervised by [Dr. Zhenyi Wang](https://joey-wang123.github.io/). Currently, I work as an AI Engineer at [Penta Global Limited](https://www.pentabd.com/), where we collaborate with [Neustring](https://neustring.com/) to build agentic solutions for major telecommunication companies. My focus is on natural language processing, multimodal reasoning, and large language / vision-language models.
+I am an incoming **Computer Science Ph.D. student** at the University of Central Florida, where I will be supervised by [Dr. Mubarak Shah](https://www.crcv.ucf.edu/person/mubarak-shah/) at the [Center for Research in Computer Vision (CRCV)](https://www.crcv.ucf.edu/). Currently, I work as an AI Engineer at [Penta Global Limited](https://www.pentabd.com/), where we collaborate with [Neustring](https://neustring.com/) to build agentic solutions for major telecommunication companies. My focus is on natural language processing, multimodal reasoning, and large language / vision-language models.
 
-I began my research journey through **NLP and VLMs**, motivated by the potential to make AI systems more inclusive, interpretable, and impactful. My work spans low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning (LoRA), and Reinforcement Learning — with a particular emphasis on improving the reasoning capabilities and explainability of both VLMs and LLMs.
+I began my research journey through **NLP and VLMs**, motivated by the potential to make AI systems more inclusive, interpretable, and impactful. My work spans low-resource learning, the application of LLMs in the medical domain, parameter-efficient fine-tuning and Reinforcement Learning — with a particular emphasis on improving the reasoning capabilities and explainability of both VLMs and LLMs.
 
 ### Research Interests
 

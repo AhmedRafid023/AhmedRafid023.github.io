@@ -47,6 +47,237 @@ p.location {
   white-space: nowrap;
 }
 
+/*****************************
+ * CV CARD styles (Work / Education entries)
+ *****************************/
+
+.list-group-item.cv-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.1rem 0.2rem;
+}
+
+.cv-card-logo {
+  flex: 0 0 auto;
+
+  img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: var(--global-bg-color);
+  }
+}
+
+.cv-card-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.cv-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.cv-card-titles {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cv-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
+}
+
+.cv-card-org {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+  overflow-wrap: break-word;
+}
+
+.cv-card-date {
+  flex: 0 0 auto;
+  padding-top: 0.15rem;
+  font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+.cv-card-summary {
+  margin: 0.6rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  overflow-wrap: break-word;
+}
+
+.cv-card-area {
+  font-style: italic;
+  color: var(--global-text-color-light);
+}
+
+.cv-card-highlights {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+
+  li {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 0.25rem;
+    color: var(--global-text-color);
+  }
+}
+
+.cv-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.cv-tag {
+  font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+  font-size: 0.72rem;
+  padding: 0.24rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--global-divider-color);
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+/*****************************
+ * CV SHARED section styles
+ * (General Information, Languages, Interests, References)
+ *****************************/
+
+// General Information — clean label / value rows
+.cv-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.3rem 0.2rem;
+}
+
+.cv-info-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.cv-info-label {
+  flex: 0 0 130px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+}
+
+.cv-info-value {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+  overflow-wrap: anywhere;
+}
+
+// Two-column responsive grid (Languages, References)
+.cv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem 1.5rem;
+  padding: 0.4rem 0.2rem;
+}
+
+// Interests — stacked category blocks with tag pills
+.cv-interests {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  padding: 0.4rem 0.2rem;
+}
+
+.cv-block-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--global-text-color);
+
+  i {
+    color: var(--global-theme-color);
+    font-size: 0.95rem;
+  }
+}
+
+.cv-block-sub {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 576px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .cv-info-label {
+    flex-basis: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .list-group-item.cv-card {
+    gap: 0.8rem;
+  }
+
+  .cv-card-logo img {
+    width: 52px;
+    height: 52px;
+    padding: 6px;
+  }
+
+  .cv-card-title {
+    font-size: 1rem;
+  }
+
+  // stack the date under the title/org so it never runs off the screen edge
+  .cv-card-head {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .cv-card-date {
+    order: -1;
+    padding-top: 0;
+    margin-bottom: 0.1rem;
+    font-size: 0.72rem;
+  }
+}
+
 i.iconlocation {
   color: var(--global-theme-color);
   font-size: 0.8rem;
@@ -112,6 +343,31 @@ div.list-group {
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 2rem;
+}
+
+/* Skills — simple bulleted list (bold category + comma-separated items) */
+ul.skills-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  font-size: 0.95rem;
+
+  li {
+    margin-bottom: 0.55rem;
+    line-height: 1.65;
+    font-weight: 400;
+    color: var(--global-text-color);
+  }
+
+  li b {
+    font-weight: 700;
+    color: var(--global-text-color);
+  }
+
+  .skill-items {
+    font-size: 0.85rem;
+    color: var(--global-text-color);
+  }
 }
 
 td.list-group-category {
