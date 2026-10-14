@@ -189,14 +189,14 @@
   ],
   "references": [
     {
-      "name": "Md Farhad Alam Bhuiyan",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Head of R&D at Penta Global Limited. <br>Assistant Professor <br> Green University of Bangladesh <br> Co-director, Center for Computational & Data Sciences, IUB <br> Email : farhad.alam@pentabd.com"
+      "name": "Yuzhang Shang",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Assistant Professor, <br> Department of Computer Science <br> Institute of Artificial Intelligence <br> University of Central Florida <br> Ph.D. Co-advisor <br> Email : yuzhang.shang@ucf.edu"
     },
     {
-      "name": "Md. Mahmudur Rahman",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Assistant Professor at Department of Computer Science and Engineering <br> University of Dhaka <br> Email : mahmudur@cse.du.ac.bd"
+      "name": "Mubarak Shah",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Trustee Chair Professor and Founding Director <br> Center for Research in Computer Vision <br> University of Central Florida <br> Ph.D. Co-advisor <br> Email : shah@crcv.ucf.edu"
     }
   ]
 }

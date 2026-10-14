@@ -43,3 +43,7 @@
 "WACV":
   url: https://openaccess.thecvf.com/WACV2024
   color: "#264653"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#b31b1b" # arXiv's own red
